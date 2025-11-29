@@ -1,0 +1,2 @@
+wwwroot\index.html
+C:\Users\Developer\source\repos\WebApplicationASPNet\WebApplicationASPNet\wwwroot\index.html

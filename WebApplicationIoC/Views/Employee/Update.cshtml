@@ -1,0 +1,32 @@
+﻿@using WebApplication_IoC.Models
+@model Employee
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Update Employer</title>
+</head>
+<body>
+    <h1>UPDATE</h1>
+    <hr />
+    <form action="update" method="post">
+        <input value="@Model.Name" name="Name" type="text" /><br />
+        <input value="@Model.IdNumber" name="IdNumber" type="text" /><br />
+
+        @Html.DropDownListFor(x => x.Position, Html.GetEnumSelectList(typeof(Position)))
+
+        @*@Html.DropDownListFor(x => x.Position, new SelectList(Enum.GetValues(typeof(Position))))
+        <select name="Position">
+            <option value="Manager">Manager</option>
+            <option value="Developer">Developer</option>
+            <option value="Tester">Tester</option>
+            <option value="Scrum master">Scrum master</option>
+            <option value="Product owner">Product owner</option>
+        </select><br />*@
+
+        <input type="text" value="@Model.Department" name="Department" /><br />
+        <input type="submit" value="Update data" /><br />
+    </form>
+</body>
+</html>

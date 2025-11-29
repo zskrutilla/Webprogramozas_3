@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="WebApplicationIoC/3_WebApplication_IoC.csproj" Id="55c03d5d-c977-4365-ad1c-3a162df20609" />
+  <Project Path="WebApplicationREST/4_WebApplication_REST.csproj" />
+  <Project Path="WebApplicationASPNet/1_WebApplication_ASPNet.csproj" />
+  <Project Path="WebApplicationMVC/2_WebApplication_MVC.csproj" Id="3b8f6538-f347-4afc-a7ff-1d5a6dcd4fd8" />
+</Solution>

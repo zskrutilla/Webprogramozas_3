@@ -1,0 +1,32 @@
+﻿@using WebApplication_IoC.Models
+@model IEnumerable<Employee>;
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Employee</title>
+</head>
+<body>
+    <h1>Employees:</h1>
+    <hr />
+    <a href="/employee/create">Create</a>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>ID number</th>
+            <th>Department</th>
+            <th>Position</th>
+        </tr>
+        @foreach (Employee emp in Model)
+        {
+            @:<tr>
+            @:<td>@emp.Name</td>
+            @:<td>@emp.IdNumber</td>
+            @:<td>@emp.Department</td>
+            @:<td>@emp.Position</td>
+                    <td><a href="/employee/update?name=@emp.Name">update</a></td>
+                    <td><a href="/employee/delete?name=@emp.Name">x</a></td>
+            @:</tr>
+        }
+    </table>
+</body>
+</html>
