@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School CRUD Frontend</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>School CRUD Frontend</h1>
+
+        <div id="messageBox" class="message-box"></div>
+
+        <!-- STUDENT SECTION -->
+        <section class="card">
+            <h2>Students</h2>
+
+            <form id="studentForm">
+                <div class="grid">
+                    <div class="form-group">
+                        <label for="studentId">Id</label>
+                        <input type="number" id="studentId" placeholder="For update only">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentName">Name</label>
+                        <input type="text" id="studentName">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentEmail">Email</label>
+                        <input type="email" id="studentEmail">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="studentEnrollmentDate">Enrollment Date</label>
+                        <input type="date" id="studentEnrollmentDate">
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label for="studentIsActive">Is Active</label>
+                        <input type="checkbox" id="studentIsActive">
+                    </div>
+                </div>
+
+                <div class="button-row">
+                    <button type="button" id="createStudentBtn">Create Student</button>
+                    <button type="button" id="updateStudentBtn">Update Student</button>
+                    <button type="button" id="loadStudentsBtn">Load Students</button>
+                    <button type="button" id="clearStudentBtn" class="secondary">Clear</button>
+                </div>
+            </form>
+
+            <div class="search-row">
+                <input type="number" id="searchStudentId" placeholder="Search student by id">
+                <button type="button" id="searchStudentBtn">Search Student</button>
+            </div>
+
+            <div id="studentSearchResult" class="search-result"></div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Enrollment Date</th>
+                        <th>Active</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTableBody"></tbody>
+            </table>
+        </section>
+
+        <!-- COURSE SECTION -->
+        <section class="card">
+            <h2>Courses</h2>
+
+            <form id="courseForm">
+                <div class="grid">
+                    <div class="form-group">
+                        <label for="courseId">Id</label>
+                        <input type="number" id="courseId" placeholder="For update only">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="courseTitle">Title</label>
+                        <input type="text" id="courseTitle">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="courseCategory">Category</label>
+                        <input type="text" id="courseCategory">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="courseCredit">Credit</label>
+                        <input type="number" id="courseCredit">
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label for="courseIsOnline">Is Online</label>
+                        <input type="checkbox" id="courseIsOnline">
+                    </div>
+                </div>
+
+                <div class="button-row">
+                    <button type="button" id="createCourseBtn">Create Course</button>
+                    <button type="button" id="updateCourseBtn">Update Course</button>
+                    <button type="button" id="loadCoursesBtn">Load Courses</button>
+                    <button type="button" id="clearCourseBtn" class="secondary">Clear</button>
+                </div>
+            </form>
+
+            <div class="search-row">
+                <input type="number" id="searchCourseId" placeholder="Search course by id">
+                <button type="button" id="searchCourseBtn">Search Course</button>
+            </div>
+
+            <div id="courseSearchResult" class="search-result"></div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Credit</th>
+                        <th>Online</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="courseTableBody"></tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

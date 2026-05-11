@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee CRUD Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Employee CRUD Demo</h1>
+
+        <section class="card">
+            <h2>Create / Update Employee</h2>
+
+            <form id="employeeForm">
+                <div class="form-row">
+                    <label for="id">Id</label>
+                    <input type="number" id="id" name="id" placeholder="For update only">
+                </div>
+
+                <div class="form-row">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="hired">Hired</label>
+                    <input type="date" id="hired" name="hired" required>
+                </div>
+
+                <div class="form-row checkbox-row">
+                    <label for="isActive">Is Active</label>
+                    <input type="checkbox" id="isActive" name="isActive">
+                </div>
+
+                <div class="form-row">
+                    <label for="position">Position</label>
+                    <select id="position" name="position">
+                        <option value="0">Developer</option>
+                        <option value="1">Tester</option>
+                        <option value="2">Manager</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <label for="salary">Salary</label>
+                    <input type="number" id="salary" name="salary" required>
+                </div>
+
+                <div class="button-group">
+                    <button type="button" id="createBtn">Create</button>
+                    <button type="button" id="updateBtn">Update</button>
+                    <button type="reset">Clear</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>Search Employee by Id</h2>
+
+            <div class="search-row">
+                <input type="number" id="searchId" placeholder="Enter employee id">
+                <button id="searchBtn">Search</button>
+            </div>
+
+            <div id="searchResult" class="search-result"></div>
+        </section>
+
+        <section class="card">
+            <h2>Employee List</h2>
+
+            <div class="button-group">
+                <button id="loadBtn">Load Employees</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Hired</th>
+                        <th>Active</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="employeeTableBody"></tbody>
+            </table>
+        </section>
+
+        <div id="messageBox" class="message-box"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
