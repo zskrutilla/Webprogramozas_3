@@ -1,0 +1,39 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    background-color: #eef1f5;
+    margin: 0;
+}
+
+.container {
+    width: 950px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #cccccc;
+}
+
+nav a {
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+input, select {
+    padding: 8px;
+    margin: 6px 0 12px 0;
+    width: 250px;
+}
+
+button {
+    padding: 8px 14px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #cccccc;
+    padding: 10px;
+    text-align: left;
+}

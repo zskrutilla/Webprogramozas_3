@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Task03.Models.SchoolClass>
+
+<h1>All Classes</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Class Name</th>
+            <th>Room Number</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var schoolClass in Model)
+        {
+            <tr>
+                <td>@schoolClass.ClassName</td>
+                <td>@schoolClass.RoomNumber</td>
+            </tr>
+        }
+    </tbody>
+</table>

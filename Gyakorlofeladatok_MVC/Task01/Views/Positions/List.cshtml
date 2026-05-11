@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Task01.Models.Position>
+
+<h1>Stored Positions</h1>
+
+@if (!Model.Any())
+{
+    <p>No positions available.</p>
+}
+else
+{
+    <ul>
+        @foreach (var position in Model)
+        {
+            <li>@position.Name</li>
+        }
+    </ul>
+}
+
+<p>
+    <a href="/Positions/Index">Back</a>
+</p>

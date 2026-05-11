@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="MvcIoCDemo/MvcIoCDemo.csproj" />
+  <Project Path="Task01/Task01.csproj" />
+  <Project Path="Task02/Task02.csproj" />
+  <Project Path="Task03/Task03.csproj" Id="df6ad89a-669a-4c96-aeff-db16db4ed4e5" />
+</Solution>

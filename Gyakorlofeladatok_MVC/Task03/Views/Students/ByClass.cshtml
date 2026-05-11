@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Task03.Models.Student>
+
+<h1>Students in class: @ViewBag.SelectedClass</h1>
+
+@if (!Model.Any())
+{
+    <p>No students found.</p>
+}
+else
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Class</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in Model)
+            {
+                <tr>
+                    <td>@student.Name</td>
+                    <td>@student.Age</td>
+                    <td>@student.ClassName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

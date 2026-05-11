@@ -1,0 +1,32 @@
+@model IEnumerable<MvcIoCDemo.Models.Position>
+
+<h1>Position List</h1>
+
+@if (!Model.Any())
+{
+    <p>No positions available.</p>
+}
+else
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<p>
+    <a href="/Positions/Index">Add another item</a>
+</p>
